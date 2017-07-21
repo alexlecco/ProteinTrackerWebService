@@ -1,0 +1,6 @@
+c:\users\alex.villecco\documents\visual studio 2013\Projects\ProteinTrackerWebService\ProteinTrackerWebService\bin\ProteinTrackerWebService.dll.config
+c:\users\alex.villecco\documents\visual studio 2013\Projects\ProteinTrackerWebService\ProteinTrackerWebService\bin\ProteinTrackerWebService.dll
+c:\users\alex.villecco\documents\visual studio 2013\Projects\ProteinTrackerWebService\ProteinTrackerWebService\bin\ProteinTrackerWebService.pdb
+c:\users\alex.villecco\documents\visual studio 2013\Projects\ProteinTrackerWebService\ProteinTrackerWebService\obj\Debug\ProteinTrackerWebService.csprojResolveAssemblyReference.cache
+c:\users\alex.villecco\documents\visual studio 2013\Projects\ProteinTrackerWebService\ProteinTrackerWebService\obj\Debug\ProteinTrackerWebService.dll
+c:\users\alex.villecco\documents\visual studio 2013\Projects\ProteinTrackerWebService\ProteinTrackerWebService\obj\Debug\ProteinTrackerWebService.pdb
