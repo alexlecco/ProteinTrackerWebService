@@ -14,6 +14,25 @@ namespace ProteinTrackerWebService
 
         private UserRepository repository = new UserRepository();
 
+        [WebMethod(Description = "Adds a new user in the Session..", EnableSession = true)]
+        public int AddUser(string name, int goal)
+        {
+            var user = new User { Goal = goal, Name = name, Total = 0 };
+            repository.Add(user);
+
+            return user.UserId;
+
+            /*
+            var userId = 0;
+            if (Session["userId"] != null)
+                userId = (int)Session["userId"];
+            Session["user" + userId] = new User { Goal = goal, Name = name, Total = 0, UserId = userId };
+            Session["userId"] = userId + 1;
+
+            return userId;
+             */
+        }
+
         [WebMethod(Description = "Adds an amount to the total..", EnableSession = true)]
         public int AddProtein(int amount, int userId)
         {
@@ -33,25 +52,6 @@ namespace ProteinTrackerWebService
 
             return user.Total;
             */
-        }
-
-        [WebMethod(Description = "Adds a new user in the Session..", EnableSession = true)]
-        public int AddUser(string name, int goal)
-        {
-            var user = new User { Goal = goal, Name = name, Total = 0 };
-            repository.Add(user);
-
-            return user.UserId;
-
-            /*
-            var userId = 0;
-            if (Session["userId"] != null)
-                userId = (int)Session["userId"];
-            Session["user" + userId] = new User { Goal = goal, Name = name, Total = 0, UserId = userId };
-            Session["userId"] = userId + 1;
-
-            return userId;
-             */
         }
 
         [WebMethod(Description = "Lists the users added in the Session..", EnableSession = true)]
