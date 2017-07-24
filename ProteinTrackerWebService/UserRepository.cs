@@ -9,7 +9,7 @@ namespace ProteinTrackerWebService
     public interface IUserRepository
     {
         void Add(User user);
-        IReadOnlyCollection<User> GetAll();
+        ReadOnlyCollection<User> GetAll();
         User GetById(int id);
         void Save(User updatedUser);
     }
@@ -36,6 +36,7 @@ namespace ProteinTrackerWebService
             var user = users.SingleOrDefault(u => u.UserId == id);
             if (user == null)
                 return null;
+            
             return new User { Goal = user.Goal, Name = user.Name, UserId = user.UserId, Total = user.Total };
         }
 
