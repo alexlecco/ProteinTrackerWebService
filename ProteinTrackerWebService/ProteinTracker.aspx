@@ -6,6 +6,23 @@
 <head runat="server">
     <title>Protein Tracker</title>
     <script type="text/javascript" src="Scripts/jquery-3.1.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            PopulateSelectUsers();
+        });
+
+        function PopulateSelectUsers() {
+            var selectUser = $('#select-user');
+            selectUser.empty();
+            ProteinTrackerWebService.ProteinTrackerWebService.ListUsers(function (users) {
+                for (var i = 0; i < users.lenght; i++) {
+                    selectUser.apped($("<option></option>"))
+                    .attr("value", users[i].UserId)
+                    .text(users[i].Name)
+                }
+            });
+        }
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
